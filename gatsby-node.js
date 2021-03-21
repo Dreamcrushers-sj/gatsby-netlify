@@ -15,10 +15,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
+          edges {
           nodes {
-            id
             fields {
-              slug
+            slug
+             }                                         }
+              frontmatter {
+                title
+              }
             }
           }
         }
@@ -49,6 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         path: post.fields.slug,
         component: blogPost,
         context: {
+          //radingTime: post.node.fields.readingTime.text,
           id: post.id,
           previousPostId,
           nextPostId,

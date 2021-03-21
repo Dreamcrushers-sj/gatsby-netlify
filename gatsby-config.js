@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `MY First Blog`,
     author: {
-      name: `Kyle Mathews`,
+      name: `Owais Yameen`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog for learning code.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Dreamcrusher`,
     },
   },
   plugins: [
@@ -46,11 +46,13 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          //`gatsby-remark-reading-time`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-image`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
